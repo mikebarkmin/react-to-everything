@@ -19,10 +19,17 @@
   ],
   "scripts": {
     "android-setup-port": "adb reverse tcp:8081 tcp:8080",
+    "build": "grunt build",
     "bundle": "rnws bundle",
-    "test": "npm run lint",
     "lint": "eslint src",
-    "start": "rnws start"
+    "react-native:android": "react-native bundle --entry-file src/main.android.js --bundle-output android/app/src/main/assets/index.android.bundle --platform android --dev false",
+    "react-native:ios": "react-native bundle --entry-file src/main.ios.js --bundle-output ios/main.jsbundle --platform ios --dev false",
+    "serve-electron": "grunt serve-electron",
+    "serve-web:dist": "grunt serve-web:dist",
+    "serve-web": "grunt serve-web",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "npm run lint",
+    "travis": "npm run build && npm run react-native:ios && npm run react-native:android && npm test"
   },
   "repository": {
     "type": "git",
@@ -33,9 +40,12 @@
     "npm": ">=2 <4"
   },
   "dependencies": {
-    "react": "^0.14.7",
+    "i18n-js": "^1.0.0",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
     "react-native": "^0.24.0",
-    "react-native-i18n": "0.0.8"
+    "react-native-i18n": "0.0.8",
+    "react-router": "^2.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
@@ -44,12 +54,25 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-1": "^6.3.13",
+    "electron-prebuilt": "^0.37.6",
     "eslint": "~2.8.0",
     "eslint-config-airbnb": "^7.0.0",
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^5.0.1",
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^0.4.6",
+    "grunt-open": "^0.2.3",
+    "grunt-webpack": "^1.0.11",
+    "load-grunt-tasks": "^3.5.0",
+    "react-hot-loader": "^1.3.0",
     "react-native-webpack-server": "^0.9.0",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.14.0",
+    "webpack-livereload-plugin": "^0.8.1"
   }
 }

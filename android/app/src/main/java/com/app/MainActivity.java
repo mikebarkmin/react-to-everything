@@ -16,7 +16,12 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "App";
+        return "nativeApp";
+    }
+
+    @Override
+    protected String getJSMainModuleName() {
+      return "src/main.android";
     }
 
     /**
