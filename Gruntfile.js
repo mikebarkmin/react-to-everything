@@ -65,6 +65,10 @@ module.exports = (grunt) => {
         path: 'http://localhost:<%= connect.options.port %>/index.html',
         app: 'xdg-open',
       },
+      electron: {
+        path: 'dist/assets/main.js',
+        app: 'electron',
+      },
     },
 
     karma: {
@@ -114,15 +118,13 @@ module.exports = (grunt) => {
       },
     },
 
-    run: {
-      'launch-electron': {
-        cmd: 'electron electron.js',
-      },
+    exec: {
+      'launch-electron': 'electron electron.js',
     },
 
     concurrent: {
       electron: {
-        tasks: ['watch'],
+        tasks: ['watch', 'exec:launch-electron'],
         options: {
           logConcurrentOutput: true,
         },
