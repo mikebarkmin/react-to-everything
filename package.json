@@ -1,0 +1,55 @@
+{
+  "name": "soccersketch",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Mike Barkmin <mbarkmin@gmail.com> (http://barkmin.eu)",
+  "license": "GPL-3.0",
+  "keywords": [
+    "mobile",
+    "native",
+    "immutable",
+    "javascript",
+    "react-native",
+    "starter-kit",
+    "webpack",
+    "babel",
+    "eslint",
+    "greenkeeper",
+    "es2015"
+  ],
+  "scripts": {
+    "android-setup-port": "adb reverse tcp:8081 tcp:8080",
+    "bundle": "rnws bundle",
+    "test": "npm run lint",
+    "lint": "eslint src",
+    "start": "rnws start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikebarkmin/SoccerSketch"
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=2 <4"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-native": "^0.24.0",
+    "react-native-i18n": "0.0.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^6.0.0",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "eslint": "~2.8.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^5.0.1",
+    "react-native-webpack-server": "^0.9.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
