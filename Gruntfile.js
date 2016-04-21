@@ -46,7 +46,7 @@ module.exports = (grunt) => {
           keepalive: true,
           middleware() {
             return [
-              mountFolder(pkgConfig.dist),
+              mountFolder(pkgConfig.dist + '/web'),
             ];
           },
         },
@@ -65,16 +65,6 @@ module.exports = (grunt) => {
         path: 'http://localhost:<%= connect.options.port %>/index.html',
         app: 'xdg-open',
       },
-      electron: {
-        path: 'dist/assets/main.js',
-        app: 'electron',
-      },
-    },
-
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-      },
     },
 
     copy: {
@@ -83,14 +73,40 @@ module.exports = (grunt) => {
           {
             flatten: true,
             src: ['<%= pkg.src %>/index.web.html'],
-            dest: '<%= pkg.dist %>/index.html',
+            dest: '<%= pkg.dist %>/web/index.html',
           },
           {
             flatten: true,
             src: ['<%= pkg.src %>/favicon.ico'],
-            dest: '<%= pkg.dist %>/favicon.ico',
+            dest: '<%= pkg.dist %>/web/favicon.ico',
           },
         ],
+      },
+      electron: {
+        files: [
+          {
+            flattern: true,
+            src: ['<%= pkg.src %>/index.desktop.html'],
+            dest: '<%= pkg.dist %>/electron/index.html',
+          },
+          {
+            flattern: true,
+            src: ['<%= pkg.src %>/electron.js'],
+            dest: '<%= pkg.dist %>/electron/index.js',
+          },
+          {
+            flattern: true,
+            src: ['<%= pkg.dist %>/web/assets/main.js'],
+            dest: '<%= pkg.dist %>/electron/assets/main.js',
+          },
+        ],
+      },
+      electronDist: {
+        files: [{
+          flattern: true,
+          src: ['<%= pkg.src %>/package.json'],
+          dest: '<%= pkg.dist %>/electron/package.json',
+        }],
       },
     },
 
@@ -106,6 +122,15 @@ module.exports = (grunt) => {
           ],
         }],
       },
+      electronDist: {
+        options: {
+          force: true,
+        },
+        files: [{
+          dot: true,
+          src: '<%= pkg.dist %>/electron/package.json',
+        }],
+      },
     },
 
     watch: {
@@ -119,7 +144,7 @@ module.exports = (grunt) => {
     },
 
     exec: {
-      'launch-electron': 'electron electron.js',
+      'launch-electron': 'electron dist/electron/index.js',
     },
 
     concurrent: {
@@ -144,12 +169,13 @@ module.exports = (grunt) => {
   });
 
   grunt.registerTask('serve-electron', () => {
-    grunt.task.run([
+    return grunt.task.run([
+      'build',
       'concurrent:electron',
     ]);
   });
 
   grunt.registerTask('test', ['karma']);
-  grunt.registerTask('build', ['clean', 'copy', 'webpack']);
+  grunt.registerTask('build', ['clean', 'webpack', 'copy']);
   grunt.registerTask('default', []);
 };

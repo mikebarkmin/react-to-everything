@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   output: {
     publicPath: 'assets/',
-    path: 'dist/assets/',
+    path: 'dist/web/assets/',
     filename: 'main.js',
   },
   debug: false,
