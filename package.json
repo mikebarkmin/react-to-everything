@@ -29,7 +29,7 @@
     "react-native": "rnws start -c 'webpack.native.config.js'",
     "start": "",
     "test": "mocha --compilers js:babel-core/register $(find src -name '*.tests.js' ! -ipath '*node_modules*')",
-    "travis": "npm run build && npm run bundle:react-native:ios && npm run bundle:react-native:android && npm lint && npm test",
+    "travis": "npm run build && npm run bundle:react-native:ios && npm run bundle:react-native:android && npm lint && npm test && npm coverage",
     "web:dist": "grunt serve-web:dist",
     "web": "grunt serve-web"
   },
