@@ -9,7 +9,7 @@ import App from './components/app/App';
 
 const content = document.getElementById('content');
 
-ReactDOM.render((
+export const main = ReactDOM.render((
   <Router history={hashHistory}>
     <Route
         component={App}
@@ -17,3 +17,5 @@ ReactDOM.render((
     />
   </Router>
 ), content);
+
+main();
