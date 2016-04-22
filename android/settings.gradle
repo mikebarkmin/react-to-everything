@@ -1,4 +1,4 @@
-rootProject.name = 'App'
+rootProject.name = 'SoccerSketch'
 
 include ':app'
 include ':react-native-i18n'
