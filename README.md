@@ -69,11 +69,11 @@ This boilerplate is all about ES6. Everything is written with new ES6 features. 
 ```
 git clone https://github.com/mikebarkmin/ReactToEverything.git
 ```
-1. Install all Dependencies
+2. Install all Dependencies
 ```
 npm install
 ```
-1. Setup React Native
+3. Setup React Native
 Install watchman:
 ```
 git clone https://github.com/facebook/watchman.git
