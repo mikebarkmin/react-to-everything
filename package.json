@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikebarkmin/SoccerSketch"
+    "url": "https://github.com/mikebarkmin/react-to-everything"
   },
   "engines": {
     "node": ">=4",
