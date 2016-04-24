@@ -19,6 +19,7 @@ This concept was introduced to me by searching the web for an all-in-one Solutio
 * [webpack](https://webpack.github.io/) to help with developing the Web and Desktop App
 * [istanbul](https://github.com/gotwarlost/istanbul) to check the coverage of your tests
 * [mocha](https://mochajs.org/) to tests your files
+* [enzyme](http://airbnb.io/enzyme/index.html) to test React and React Native
 
 ## Basic philosophy
 
@@ -30,13 +31,13 @@ I find it more cleary, when a test is nearby the file, which is the test tests. 
 ```
 [file].tests.js // [file] = file to test
 ```
-For example take a look at src/main.js and src/main.tests.js. Of course the test in main.tests.js is kinda stupid, but this should only illustrate where your tests should be located and how they should be named.
+For example take a look at src/App/AppRender.tests.js and src/App/AppRender.js. This should illustrate where your tests should be located and how they should be named.
 
 Because the Base Class as described by [Benoitvallon](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#components) of each Component should contain all of the logic, this file should be tested really well. I would recommend to create the test file right when you create the component and write tests for each method in the Base Class as soon as possible.
 
 ## NPM Scripts
 
-I have created npm scripts for every task I have encountered, when something is missing let me know. :)
+I have created npm scripts for every task I have encountered, when something is missing let me know. :smile:
 
 npm run ...
 * **build** - runs webpack to translate es6 code and merge all of your code in a single file
@@ -61,7 +62,7 @@ I find it really important to use a consistent codestyle throughout your project
 
 ### ES6
 
-This boilerplate is all about ES6. Everything is written with new ES6 features. Tests ... ES6, Source Files ... ES6, Gruntfile ... ES6, Webpack Config ... ES6. So keep moving with Javascript and use ES6. I love it <3. Here you can read about how you have done something with Javascript and how you do it with ES6. [Use ECMAScript 6 Today](http://code.tutsplus.com/articles/use-ecmascript-6-today--net-31582)
+This boilerplate is all about ES6. Everything is written with new ES6 features. Tests ... ES6, Source Files ... ES6, Gruntfile ... ES6, Webpack Config ... ES6. So keep moving with Javascript and use ES6. I love it :heart:. Here you can read about how you have done something with Javascript and how you do it with ES6. [Use ECMAScript 6 Today](http://code.tutsplus.com/articles/use-ecmascript-6-today--net-31582)
 
 # How to get started?
 
@@ -87,3 +88,7 @@ sudo npm install -g flow-bin
 Android requires a little bit more work from you. But when you are following this guide ([Android Setup](https://facebook.github.io/react-native/docs/android-setup.html)), it should be easy.
 
 Now everything is setup up and you are ready to develop your awesome app. I would really love to know about your projects. So send me an email and I will take a look.
+
+# TODOS
+
+- [ ] find out how to test react-native with this setup
