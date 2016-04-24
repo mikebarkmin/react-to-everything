@@ -65,15 +65,10 @@ This boilerplate is all about ES6. Everything is written with new ES6 features. 
 
 # How to get started?
 
-1. Clone the repository
-```
-git clone https://github.com/mikebarkmin/ReactToEverything.git
-```
-2. Install all Dependencies
-```
-npm install
-```
+1. Clone the repository `git clone https://github.com/mikebarkmin/react-to-everything.git`
+2. Install all Dependencies `npm install`
 3. Setup React Native
+
 Install watchman:
 ```
 git clone https://github.com/facebook/watchman.git
