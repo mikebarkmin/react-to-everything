@@ -119,7 +119,7 @@ android {
                 output.versionCodeOverride =
                         versionCodes.get(abi) * 1048576 + defaultConfig.versionCode
             }
-            output.outputFile = new File("../dist/android/" + output.outputFile.name)
+            // output.outputFile = new File("../dist/android/" + output.outputFile.name)
         }
     }
 }
