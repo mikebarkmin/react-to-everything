@@ -1,8 +1,4 @@
-import Render from './AppRender';
-import { Component } from 'react';
+import Base from './AppBase';
 
-export default class App extends Component {
-  render() {
-    return Render.call(this, this.props, this.state);
-  }
+export default class App extends Base {
 }

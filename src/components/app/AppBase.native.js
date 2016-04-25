@@ -26,15 +26,17 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function () {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>
-        {I18n.t('greeting')}
-      </Text>
-      <Text style={styles.instructions}>
-        To get started, edit main.{Platform.OS}.js
-      </Text>
-    </View>
-  );
+export default class NativeBase extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          {I18n.t('greeting')}
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit main.{Platform.OS}.js
+        </Text>
+      </View>
+    );
+  }
 }
