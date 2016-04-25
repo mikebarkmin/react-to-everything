@@ -1,4 +1,5 @@
-import NativeRender from './AppRender.native';
+import Render from './AppRender.native';
 
-export default class Render extends NativeRender {
+export default function () {
+  return Render.call(this, this.props, this.state);
 }

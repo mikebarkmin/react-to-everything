@@ -5,7 +5,7 @@ import React, {
   Text,
 } from 'react-native';
 
-import I18n from '../../config/i18n';
+import I18n from '../../config/I18n';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,17 +26,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class NativeRender extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          {I18n.t('greeting')}
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit main.{Platform.OS}.js
-        </Text>
-      </View>
-    );
-  }
+export default function () {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.welcome}>
+        {I18n.t('greeting')}
+      </Text>
+      <Text style={styles.instructions}>
+        To get started, edit main.{Platform.OS}.js
+      </Text>
+    </View>
+  );
 }
