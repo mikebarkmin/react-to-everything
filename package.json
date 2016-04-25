@@ -46,8 +46,8 @@
   "dependencies": {
     "i18n-js": "^1.0.0",
     "electron-prebuilt": "^0.37.6",
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
     "react-native": "^0.24.0",
     "react-native-i18n": "0.0.8",
     "react-router": "^2.3.0"
