@@ -1,8 +1,8 @@
 # Mobile, desktop and website Apps with the same code
-[![Coverage Status](https://coveralls.io/repos/github/mikebarkmin/ReactToEverything/badge.svg?branch=master)](https://coveralls.io/github/mikebarkmin/ReactToEverything?branch=master)
-[![Build Status](https://travis-ci.org/mikebarkmin/ReactToEverything.svg?branch=master)](https://travis-ci.org/mikebarkmin/ReactToEverything)
-[![Dependency Status](https://david-dm.org/mikebarkmin/ReactToEverything.svg)](https://david-dm.org/mikebarkmin/ReactToEverything)
-[![devDependency Status](https://david-dm.org/mikebarkmin/ReactToEverything/dev-status.svg)](https://david-dm.org/mikebarkmin/ReactToEverything#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/mikebarkmin/react-to-everything/badge.svg?branch=master)](https://coveralls.io/github/mikebarkmin/react-to-everything?branch=master)
+[![Build Status](https://travis-ci.org/mikebarkmin/react-to-everything.svg?branch=master)](https://travis-ci.org/mikebarkmin/react-to-everything)
+[![Dependency Status](https://david-dm.org/mikebarkmin/react-to-everything.svg)](https://david-dm.org/mikebarkmin/react-to-everything)
+[![devDependency Status](https://david-dm.org/mikebarkmin/react-to-everything/dev-status.svg)](https://david-dm.org/mikebarkmin/react-to-everything#info=devDependencies)
 
 This concept was introduced to me by searching the web for an all-in-one Solution. After a while i have realizied, that something like this is not the best approch to make a high quality app. Then i had found out about react and react-native. After a while i realizied, that this might be the best approch after all. So i went on GitHub to find a repo, which used the react enviroment to make something universial possibel. I wasn't disappointed. [Benoitvallon](https://github.com/benoitvallon) has created something wonderfull, which got me hook at the first glance. His repo [react-native-nw-react-calculator](https://github.com/benoitvallon/react-native-nw-react-calculator) was the perfect starting point. It almost featured everything i wanted. So i tooked this repo and made the neccessary changes, which are fitting my kind of thinking better. So ReactToEverything was created.
 
