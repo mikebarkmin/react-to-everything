@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/mikebarkmin/react-to-everything.svg)](https://david-dm.org/mikebarkmin/react-to-everything)
 [![devDependency Status](https://david-dm.org/mikebarkmin/react-to-everything/dev-status.svg)](https://david-dm.org/mikebarkmin/react-to-everything#info=devDependencies)
 
-This concept was introduced to me by searching the web for an all-in-one Solution. After a while i have realizied, that something like this is not the best approch to make a high quality app. Then i had found out about react and react-native. After a while i realizied, that this might be the best approch after all. So i went on GitHub to find a repo, which used the react enviroment to make something universial possibel. I wasn't disappointed. [Benoitvallon](https://github.com/benoitvallon) has created something wonderfull, which got me hook at the first glance. His repo [react-native-nw-react-calculator](https://github.com/benoitvallon/react-native-nw-react-calculator) was the perfect starting point. It almost featured everything i wanted. So i tooked this repo and made the neccessary changes, which are fitting my kind of thinking better. So ReactToEverything was created.
+This concept was introduced to me by searching the web for an all-in-one Solution. But i came to the conclusion, that a 100% shared Codebase is not possible. Then i had found out about react and react-native. After a while i realized, that this might be the best approach after all. So i went on GitHub to find a repo, which used the react environment to make something universal possible. I wasn't disappointed. [Benoitvallon](https://github.com/benoitvallon) has created something wonderfull, which got me hook at the first glance. His repo [react-native-nw-react-calculator](https://github.com/benoitvallon/react-native-nw-react-calculator) was the perfect starting point. It almost featured everything i wanted. So i took this repo and made the necessary changes, which are fitting my kind of thinking better. So react-to-everything was created.
 
 ## Libraries
 
@@ -25,9 +25,11 @@ This concept was introduced to me by searching the web for an all-in-one Solutio
 
 I kept the Basic philosophy like [Benoitvallon](https://github.com/benoitvallon) has defined it. So take a look at his [repo](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#basic-philosophy) to understand how you should structure your Codebase, when using this Boilerplate.
 
+![Imgur](http://i.imgur.com/XdYh2J1.png?1)
+
 ## Tests
 
-I find it more cleary, when a test is nearby the file, which is the test tests. Therefore I have configured mocha, so that you should write a test in a schema like this.
+I find it more clearly, when a test is nearby the file, which is the test tests. Therefore I have configured mocha, so that you should write a test in a schema like this.
 ```
 [file].tests.js // [file] = file to test
 ```
@@ -58,7 +60,7 @@ npm ...
 
 ## Codestyle
 
-I find it really important to use a consistent codestyle throughout your project. Therefore I added ESLint as a devDependency and created an eslint-config file. Most of the Codestyle rules came from the [Airbnb Style Guide](https://github.com/airbnb/javascript). They have done an awesome job with this Style Guide. I think, when you use a good Codestyle you make less errors and when you combine that with ESLint, which will consistently throw your bad styles at you (when you have an editor, which picks show eslint errors/warning or after running "npm run lint"), you will make much less mistakes.
+I find it really important to use a consistent Codestyle throughout your project. Therefore I added ESLint as a devDependency and created an eslint-config file. Most of the Codestyle rules came from the [Airbnb Style Guide](https://github.com/airbnb/javascript). They have done an awesome job with this Style Guide. I think, when you use a good Codestyle you make less errors and when you combine that with ESLint, which will consistently throw your bad styles at you (when you have an editor, which picks show ESLint errors/warning or after running "npm run lint"), you will make much less mistakes.
 
 ### ES6
 
@@ -85,7 +87,7 @@ Install flow:
 sudo npm install -g flow-bin
 ```
 
-Android requires a little bit more work from you. But when you are following this guide ([Android Setup](https://facebook.github.io/react-native/docs/android-setup.html)), it should be easy.
+Android requires a little bit more work from you, but when you are following this guide ([Android Setup](https://facebook.github.io/react-native/docs/android-setup.html)) it should be easy.
 
 Now everything is setup up and you are ready to develop your awesome app. I would really love to know about your projects. So send me an email and I will take a look.
 
