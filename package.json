@@ -45,7 +45,7 @@
   "dist": "dist",
   "dependencies": {
     "i18n-js": "^1.0.0",
-    "electron-prebuilt": "^0.37.6",
+    "electron-prebuilt": "^1.0.1",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-native": "^0.24.0",
