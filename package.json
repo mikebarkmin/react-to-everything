@@ -77,7 +77,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "git+https://github.com/mikebarkmin/grunt-exec.git",
     "grunt-open": "^0.2.3",
-    "grunt-webpack": "^1.0.11",
+    "grunt-webpack": "^1.0.13",
     "istanbul": "^0.4.3",
     "jsdom": "^9.0.0",
     "load-grunt-tasks": "^3.5.0",
