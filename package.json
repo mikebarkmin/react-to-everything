@@ -61,7 +61,7 @@
     "babel-preset-stage-1": "^6.3.13",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
-    "electron-packager": "^7.0.1",
+    "electron-packager": "^7.5.1",
     "enzyme": "^2.2.0",
     "eslint": "~3.0.1",
     "eslint-config-airbnb": "^9.0.1",
