@@ -53,10 +53,21 @@ npm run ...
 * **coverage** - runs code coverage
 * **lint** - runs eslint to check your code style
 * **travis** - runs build, test, coverage and lint
+* **plot** - auto generate components
 
 npm ...
 * **start** - runs your app in the browser
 * **test** - runs mocha to test your app
+
+## Plop
+With [Plop](https://github.com/amwmedia/plop) you can auto generate new components. Simply type
+```
+npm run plop
+```
+and then choose the desired option. Give a name and you a ready to go and start
+coding, without the hassle of creating the same structure over and over again.
+Plop is configured by plopfile.js. The templates can be found in
+plop-templates.
 
 ## Codestyle
 
