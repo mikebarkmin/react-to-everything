@@ -8,7 +8,7 @@ module.exports = {
   },
   cache: true,
   debug: true,
-  devtool: false,
+  devtool: 'eval-source-map',
   entry: [
     'webpack/hot/only-dev-server',
     './src/main.js',

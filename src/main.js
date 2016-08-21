@@ -17,5 +17,3 @@ export const main = ReactDOM.render((
     />
   </Router>
 ), content);
-
-main();
