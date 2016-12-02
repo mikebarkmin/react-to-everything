@@ -64,7 +64,7 @@
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
-    "css-loader": "^0.24.0",
+    "css-loader": "^0.26.1",
     "electron-packager": "^8.0.0",
     "enzyme": "^2.2.0",
     "eslint": "~3.4.0",
