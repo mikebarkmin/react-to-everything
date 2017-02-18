@@ -7,9 +7,9 @@ import App from './components/app/App';
 // require('normalize.css');
 // require('./styles/main.css');
 
-const content = document.getElementById('content');
+const content = window.document.getElementById('content');
 
-export const main = ReactDOM.render((
+export default ReactDOM.render((
   <Router history={hashHistory}>
     <Route
         component={App}

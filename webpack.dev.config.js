@@ -7,7 +7,6 @@ module.exports = {
     publicPath: 'assets/',
   },
   cache: true,
-  debug: true,
   devtool: 'eval-source-map',
   entry: [
     'webpack/hot/only-dev-server',
@@ -22,34 +21,45 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
   ],
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.(js|jsx|es6)$/,
+        enforce: 'pre',
         include: path.resolve(__dirname, 'src'),
         loader: 'eslint-loader',
+      }, {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          'react-hot-loader',
+          'babel-loader',
+        ],
+      }, {
+        test: /\.sass/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader?outputStyle=expanded&indentedSyntax',
+        ],
+      }, {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      }, {
+        test: /\.(png|jpg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+        }],
+      }, {
+        test: /\.(js|jsx|es6)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
       },
     ],
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'react-hot!babel-loader',
-    }, {
-      test: /\.sass/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax',
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader',
-    }, {
-      test: /\.(png|jpg)$/,
-      loader: 'url-loader?limit=8192',
-    }, {
-      test: /\.(js|jsx|es6)$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-      query: {
-        cacheDirectory: true,
-        presets: ['es2015', 'stage-1', 'react'],
-      },
-    }],
   },
 };

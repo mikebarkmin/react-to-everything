@@ -30,9 +30,7 @@ module.exports = (grunt) => {
         publicPath: '/assets/',
         contentBase: './<%= pkg.src %>/',
       },
-
       start: {
-        keepAlive: true,
       },
     },
 
@@ -43,7 +41,6 @@ module.exports = (grunt) => {
 
       dist: {
         options: {
-          keepalive: true,
           middleware() {
             return [
               mountFolder(pkgConfig.dist + '/web'),
@@ -164,7 +161,7 @@ module.exports = (grunt) => {
 
     return grunt.task.run([
       'open:dev',
-      'webpack-dev-server',
+      'webpack-dev-server:start',
     ]);
   });
 
