@@ -11,7 +11,7 @@ This concept was introduced to me by searching the web for an all-in-one Solutio
 * [react](https://facebook.github.io/react/) for Web and Desktop App
 * [react-native](https://facebook.github.io/react-native/) for iOs and Android App
 * [i18n-js](https://github.com/fnando/i18n-js) for i18n Translation in all Apps
-* [electron-prebuilt](http://electron.atom.io/) to build an electron App
+* [electron](http://electron.atom.io/) to build an electron App
 * [electron-packager](https://github.com/electron-userland/electron-packager) to package an electron App for Linux, Mac and Windows
 * [babel](https://babeljs.io/) to be able to use all the fancy ES6 Stuff
 * [eslint](http://eslint.org/) to really use all the fancy ES6 Stuff
@@ -53,7 +53,7 @@ npm run ...
 * **coverage** - runs code coverage
 * **lint** - runs eslint to check your code style
 * **travis** - runs build, test, coverage and lint
-* **plot** - auto generate components
+* **plop** - auto generate components
 
 npm ...
 * **start** - runs your app in the browser
