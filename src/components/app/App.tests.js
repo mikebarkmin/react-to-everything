@@ -1,9 +1,9 @@
-import App from './App';
-
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 import React from 'react';
 import { mount } from 'enzyme';
+
+import App from './App';
 
 describe('App', () => {
   describe('Desktop', () => {

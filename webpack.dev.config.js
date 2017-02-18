@@ -9,7 +9,7 @@ module.exports = {
   cache: true,
   devtool: 'eval-source-map',
   entry: [
-    'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     './src/main.js',
   ],
   stats: {
@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   module: {
     rules: [

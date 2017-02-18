@@ -1,7 +1,7 @@
-import I18n from './I18n';
-
 import { describe, it } from 'mocha';
 import assert from 'assert';
+
+import I18n from './I18n';
 
 describe('i18n', () => {
   describe('fallbacks', () => {
