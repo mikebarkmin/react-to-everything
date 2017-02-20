@@ -27,7 +27,7 @@ const userReducer = function userReducer(state = {}, action) {
       return { ...state, name: action.payload };
     }
     default: {
-      return { state, err: `ACTION TYPE ${action.type} does not exsists` };
+      return { ...state, err: `ACTION TYPE ${action.type} does not exsists` };
     }
   }
 };

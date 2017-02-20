@@ -1,19 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
-import App from './components/app/App';
-
-// CSS
-// require('normalize.css');
-// require('./styles/main.css');
+import { render } from 'react-dom';
+import { hashHistory, Router, Route, IndexRoute } from 'react-router';
+import { Provider } from 'react-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
+import App from './containers/app/App';
+import Home from './containers/home/Home';
+import Settings from './containers/settings/Settings';
+import store from './store/store';
 
 const content = window.document.getElementById('content');
 
-export default ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route
-        component={App}
-        path="/"
-    />
-  </Router>
+const history = syncHistoryWithStore(hashHistory, store);
+
+export default render((
+  <Provider store={store}>
+    <Router history={history} >
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="settings" component={Settings} />
+      </Route>
+    </Router>
+  </Provider>
 ), content);
