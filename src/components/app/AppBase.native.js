@@ -5,7 +5,7 @@ import React, {
   Text,
 } from 'react-native';
 
-import I18n from '../../config/I18n';
+import I18n from '../../locales/I18n';
 
 const styles = StyleSheet.create({
   container: {

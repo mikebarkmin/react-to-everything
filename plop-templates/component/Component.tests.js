@@ -1,9 +1,9 @@
-import {{pascalCase name}} from './{{pascalCase name}}';
-
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 import React from 'react';
 import { mount } from 'enzyme';
+
+import {{pascalCase name}} from './{{pascalCase name}}';
 
 describe('{{pascalCase name}}', () => {
   describe('Desktop', () => {
