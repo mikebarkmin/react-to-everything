@@ -11,6 +11,11 @@ import { closeDrawer } from '../../actions/navigationActions';
 }))
 @withRouter
 export default class Base extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goToHome = this.goToHome.bind(this);
+    this.goToSettings = this.goToSettings.bind(this);
+  }
   handleClose() {
     this.props.dispatch(closeDrawer());
   }
@@ -28,8 +33,8 @@ export default class Base extends React.Component {
           docked={false}
           open={this.props.navigation.openDrawer}
       >
-        <MenuItem onTouchTap={this.goToHome.bind(this)}>Home</MenuItem>
-        <MenuItem onTouchTap={this.goToSettings.bind(this)}>Settings</MenuItem>
+        <MenuItem onTouchTap={this.goToHome}>Home</MenuItem>
+        <MenuItem onTouchTap={this.goToSettings}>Settings</MenuItem>
       </Drawer>
     );
   }
@@ -38,4 +43,5 @@ export default class Base extends React.Component {
 Base.propTypes = {
   dispatch: React.PropTypes.func,
   navigation: React.PropTypes.object,
+  router: React.PropTypes.object,
 };

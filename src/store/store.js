@@ -17,6 +17,11 @@ const reducers = combineReducers({
 
 const middleware = applyMiddleware(promise(), thunk, logger());
 
-const store = createStore(reducers, middleware);
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+  reducers,
+  middleware,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 export default store;
