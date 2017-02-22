@@ -30,7 +30,13 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'react-hot-loader',
-          'babel-loader',
+          {
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015', 'react', 'stage-1'],
+              plugins: ['transform-decorators-legacy'],
+            },
+          },
         ],
       }, {
         test: /\.sass/,
@@ -53,10 +59,6 @@ module.exports = {
             limit: 8192,
           },
         }],
-      }, {
-        test: /\.(js|jsx|es6)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
       },
     ],
   },

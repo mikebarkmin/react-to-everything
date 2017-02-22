@@ -1,42 +1,29 @@
-import React, {
-  StyleSheet,
-  View,
-  Platform,
-  Text,
-} from 'react-native';
+import React from 'react';
 
-import I18n from '../../locales/I18n';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+import { FooterTab, Footer, Button, Text, Icon } from 'native-base';
 
 export default class NativeBase extends React.Component {
   render() {
+    const path = this.props.navigation.routes.slice(-1)[0].path;
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          {I18n.t('greeting')}
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit main.{Platform.OS}.js
-        </Text>
-      </View>
+      <Footer>
+        <FooterTab>
+          <Button
+              active={(path === 'home')}
+              onPress={this.goToHome}
+          >
+            <Icon name="home" />
+            <Text>Home</Text>
+          </Button>
+          <Button
+              active={(path === 'settings')}
+              onPress={this.goToSettings}
+          >
+            <Icon name="settings" />
+            <Text>Settings</Text>
+          </Button>
+        </FooterTab>
+      </Footer>
     );
   }
 }

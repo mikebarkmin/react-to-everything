@@ -2,6 +2,7 @@ import * as NAVIGATION_ACTION_TYPES from '../constants/navigationActionTypes';
 
 const initState = {
   openDrawer: false,
+  routes: [{ path: 'home' }],
 };
 
 const navigationReducer = function navigationReducer(state = initState, action) {
@@ -24,8 +25,25 @@ const navigationReducer = function navigationReducer(state = initState, action) 
         openDrawer: !state.openDrawer,
       };
     }
+    case NAVIGATION_ACTION_TYPES.PUSH_ROUTE: {
+      return {
+        ...state,
+        routes: [...state.routes, action.payload],
+        openDrawer: false,
+      };
+    }
+    case NAVIGATION_ACTION_TYPES.POP_ROUTE: {
+      let routes = [...state.routes].shift();
+      if (!routes.length > 1) {
+        routes = state.routes;
+      }
+      return {
+        ...state,
+        routes,
+      };
+    }
     default: {
-      return { ...state, err: `ACTION TYPE ${action.type} does not exsists` };
+      return state;
     }
   }
 };

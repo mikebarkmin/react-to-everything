@@ -20,3 +20,17 @@ export function toggleDrawer() {
     payload: true,
   };
 }
+
+export function pushRoute(route) {
+  return {
+    type: NAVIGATION_ACTION_TYPES.PUSH_ROUTE,
+    payload: route,
+  };
+}
+
+export function popRoute() {
+  return {
+    type: NAVIGATION_ACTION_TYPES.POP_ROUTE,
+    payload: true,
+  };
+}

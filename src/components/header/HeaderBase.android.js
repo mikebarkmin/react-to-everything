@@ -1,4 +1,4 @@
-import NativeBase from './Header.native';
+import NativeBase from './HeaderBase.native';
 
 export default class Base extends NativeBase {
 }

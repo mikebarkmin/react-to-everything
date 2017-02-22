@@ -6,6 +6,13 @@ import Navigation from '../../components/navigation/Navigation';
 
 injectTapEventPlugin();
 
+const styles = {
+  content: {
+    maxWidth: 800,
+    margin: '0 auto',
+  },
+};
+
 export default class Base extends React.Component {
   render() {
     return (
@@ -13,7 +20,9 @@ export default class Base extends React.Component {
         <div>
           <Header />
           <Navigation />
-          {this.props.children}
+          <div style={styles.content}>
+            {this.renderRoute()}
+          </div>
         </div>
       </MuiThemeProvider>
     );

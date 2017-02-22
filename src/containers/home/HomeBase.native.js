@@ -1,15 +1,11 @@
-import React, {
-  StyleSheet,
-  View,
-  Platform,
-  Text,
-} from 'react-native';
+import React from 'react';
 
-import I18n from '../../locales/I18n';
+import { Text } from 'native-base';
 
 export default class NativeBase extends React.Component {
   render() {
     return (
+      <Text>Home</Text>
     );
   }
 }
