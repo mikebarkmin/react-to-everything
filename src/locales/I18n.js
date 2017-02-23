@@ -9,4 +9,6 @@ I18n.translations = {
   de,
 };
 
+I18n.locale = navigator.language || navigator.userLanguage;
+
 export default I18n;

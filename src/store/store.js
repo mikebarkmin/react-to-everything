@@ -6,10 +6,12 @@ import promise from 'redux-promise-middleware';
 
 import userReducer from '../reducers/userReducer';
 import navigationReducer from '../reducers/navigationReducer';
+import settingsReducer from '../reducers/settingsReducer';
 
 const reducers = combineReducers({
   user: userReducer,
   navigation: navigationReducer,
+  settings: settingsReducer,
 });
 
 const middleware = applyMiddleware(promise(), thunk, logger());

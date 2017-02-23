@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import ActionSettings from 'material-ui/svg-icons/action/settings';
 
+import I18n from '../../locales/I18n';
 import { closeDrawer } from '../../actions/navigationActions';
 
 export default class Base extends React.Component {
@@ -22,12 +23,12 @@ export default class Base extends React.Component {
         <MenuItem
             leftIcon={<ActionHome />}
             onTouchTap={this.goToHome}
-            primaryText="Home"
+            primaryText={I18n.t('tabs.home')}
         />
         <MenuItem
             leftIcon={<ActionSettings />}
             onTouchTap={this.goToSettings}
-            primaryText="Settings"
+            primaryText={I18n.t('tabs.settings')}
         />
       </Drawer>
     );

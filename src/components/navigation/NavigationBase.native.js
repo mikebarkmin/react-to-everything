@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { FooterTab, Footer, Button, Text, Icon } from 'native-base';
+
+import I18n from '../../locales/I18n';
 
 export default class NativeBase extends React.Component {
   render() {
@@ -13,14 +14,14 @@ export default class NativeBase extends React.Component {
               onPress={this.goToHome}
           >
             <Icon name="home" />
-            <Text>Home</Text>
+            <Text>{I18n.t('tabs.home')}</Text>
           </Button>
           <Button
               active={(path === 'settings')}
               onPress={this.goToSettings}
           >
             <Icon name="settings" />
-            <Text>Settings</Text>
+            <Text>{I18n.t('tabs.settings')}</Text>
           </Button>
         </FooterTab>
       </Footer>
