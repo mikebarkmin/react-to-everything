@@ -34,11 +34,6 @@ module.exports = ( plop ) => {
         path: "src/components/{{dashCase name}}/{{pascalCase name}}Base.native.js",
         templateFile: "plop-templates/component/ComponentBase.native.js"
       },
-      {
-        type: "add",
-        path: "src/components/{{dashCase name}}/{{pascalCase name}}.tests.js",
-        templateFile: "plop-templates/component/Component.tests.js"
-      },
     ]
   });
   plop.setGenerator( "container", {
@@ -75,11 +70,6 @@ module.exports = ( plop ) => {
         type: "add",
         path: "src/containers/{{dashCase name}}/{{pascalCase name}}Base.native.js",
         templateFile: "plop-templates/container/ContainerBase.native.js"
-      },
-      {
-        type: "add",
-        path: "src/containers/{{dashCase name}}/{{pascalCase name}}.tests.js",
-        templateFile: "plop-templates/container/Container.tests.js"
       },
     ]
   });
