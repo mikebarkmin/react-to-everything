@@ -43,6 +43,7 @@
     "react/sort-comp": 1,
     "react/jsx-wrap-multilines": 1,
     "prefer-template": 0,
+    "import/no-named-as-default": 0,
   },
   "extends": "airbnb/base"
 }
