@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import { connect } from 'react-redux';
 
+import I18n from '../../locales/I18n';
 import { toggleDrawer } from '../../actions/navigationActions';
 
 @connect()
@@ -17,7 +18,7 @@ export default class Base extends React.Component {
     return (
       <AppBar
           onLeftIconButtonTouchTap={this.handleToggle}
-          title="ReactToEverything"
+          title={I18n.t('reactToEverything')}
       />
     );
   }

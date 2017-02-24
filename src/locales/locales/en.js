@@ -1,4 +1,5 @@
 const en = {
+  reactToEverything: 'React to Everything',
   greeting: 'Hi!',
   settings: {
     settings1: 'Settings 1',

@@ -5,5 +5,6 @@ export default {
     primary1Color: colors.primary.normal,
     primary2Color: colors.primary.darker,
     accent1Color: colors.secondary.normal,
+    pickerHeaderColor: colors.primary.normal,
   },
 };
