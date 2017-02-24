@@ -34,10 +34,11 @@ const navigationReducer = function navigationReducer(state = initState, action) 
     }
     case NAVIGATION_ACTION_TYPES.POP_ROUTE: {
       let routes;
-      if (!state.routes.length > 1) {
+      if (state.routes.length <= 1) {
         routes = state.routes;
       } else {
-        routes = [...state.routes].shift();
+        routes = [...state.routes];
+        routes.pop();
       }
       return {
         ...state,
