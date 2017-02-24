@@ -17,7 +17,7 @@
 
 ## Basic philosophy
 
-I kept the basic philosophy like [Benoitvallon](https://github.com/benoitvallon) has defined it. So take a look at his [repo](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#basic-philosophy) to understand how you should structure your Codebase, when using this Boilerplate.
+I kept the basic philosophy of [Benoitvallon](https://github.com/benoitvallon). So take a look at his [repo](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#basic-philosophy) to understand how you should structure your codebase, when using this boilerplate.
 
 ![Imgur](http://i.imgur.com/XdYh2J1.png?1)
 
