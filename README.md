@@ -1,18 +1,22 @@
+# React to Everything
 # Mobile, desktop and website Apps with the same code
 [![Coverage Status](https://coveralls.io/repos/github/mikebarkmin/react-to-everything/badge.svg?branch=master)](https://coveralls.io/github/mikebarkmin/react-to-everything?branch=master)
 [![Build Status](https://travis-ci.org/mikebarkmin/react-to-everything.svg?branch=master)](https://travis-ci.org/mikebarkmin/react-to-everything)
 
 ## Libraries
 
-* [react](https://facebook.github.io/react/) for Web and Desktop App
-* [react-native](https://facebook.github.io/react-native/) for iOs and Android App
-* [i18n-js](https://github.com/fnando/i18n-js) for i18n Translation in all Apps
-* [electron](http://electron.atom.io/) to build an electron App
-* [electron-packager](https://github.com/electron-userland/electron-packager) to package an electron App for Linux, Mac and Windows
-* [babel](https://babeljs.io/) to be able to use all the fancy ES6 Stuff
-* [eslint](http://eslint.org/) to really use all the fancy ES6 Stuff
+* [react](https://facebook.github.io/react/) for web and desktop app
+* [react-native](https://facebook.github.io/react-native/) for iOS and android app
+* [redux](http://redux.js.org/) to manage the state
+* [react-redux](http://redux.js.org/docs/basics/UsageWithReact.html) to connect
+  redux with react
+* [i18n-js](https://github.com/fnando/i18n-js) for i18n translation in all apps
+* [electron](http://electron.atom.io/) to build an electron app
+* [electron-packager](https://github.com/electron-userland/electron-packager) to package an electron app for Linux, Mac and Windows
+* [babel](https://babeljs.io/) to be able to use all the fancy ES6 stuff
+* [eslint](http://eslint.org/) to really use all the fancy ES6 stuff
 * [grunt](http://gruntjs.com/) to create build task
-* [webpack](https://webpack.github.io/) to help with developing the Web and Desktop App
+* [webpack](https://webpack.github.io/) to help with developing the web and desktop app
 * [jest](http://facebook.github.io/jest/) to tests your files
 
 ## Basic philosophy
