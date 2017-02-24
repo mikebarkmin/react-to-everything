@@ -17,9 +17,7 @@ This concept was introduced to me by searching the web for an all-in-one Solutio
 * [eslint](http://eslint.org/) to really use all the fancy ES6 Stuff
 * [grunt](http://gruntjs.com/) to create build task
 * [webpack](https://webpack.github.io/) to help with developing the Web and Desktop App
-* [istanbul](https://github.com/gotwarlost/istanbul) to check the coverage of your tests
-* [mocha](https://mochajs.org/) to tests your files
-* [enzyme](http://airbnb.io/enzyme/index.html) to test React and React Native
+* [jest](http://facebook.github.io/jest/) to tests your files
 
 ## Basic philosophy
 
@@ -28,12 +26,6 @@ I kept the Basic philosophy like [Benoitvallon](https://github.com/benoitvallon)
 ![Imgur](http://i.imgur.com/XdYh2J1.png?1)
 
 ## Tests
-
-I find it more clearly, when a test is nearby the file, which is the test tests. Therefore I have configured mocha, so that you should write a test in a schema like this.
-```
-[file].tests.js // [file] = file to test
-```
-For example take a look at src/App/AppRender.tests.js and src/App/AppRender.js. This should illustrate where your tests should be located and how they should be named.
 
 Because the Base Class as described by [Benoitvallon](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#components) of each Component should contain all of the logic, this file should be tested really well. I would recommend to create the test file right when you create the component and write tests for each method in the Base Class as soon as possible.
 
@@ -101,7 +93,3 @@ sudo npm install -g flow-bin
 Android requires a little bit more work from you, but when you are following this guide ([Android Setup](https://facebook.github.io/react-native/docs/android-setup.html)) it should be easy.
 
 Now everything is setup up and you are ready to develop your awesome app. I would really love to know about your projects. So send me an email and I will take a look.
-
-# TODOS
-
-- [ ] find out how to test react-native with this setup
