@@ -1,10 +1,6 @@
 # Mobile, desktop and website Apps with the same code
 [![Coverage Status](https://coveralls.io/repos/github/mikebarkmin/react-to-everything/badge.svg?branch=master)](https://coveralls.io/github/mikebarkmin/react-to-everything?branch=master)
 [![Build Status](https://travis-ci.org/mikebarkmin/react-to-everything.svg?branch=master)](https://travis-ci.org/mikebarkmin/react-to-everything)
-[![Dependency Status](https://david-dm.org/mikebarkmin/react-to-everything.svg)](https://david-dm.org/mikebarkmin/react-to-everything)
-[![devDependency Status](https://david-dm.org/mikebarkmin/react-to-everything/dev-status.svg)](https://david-dm.org/mikebarkmin/react-to-everything#info=devDependencies)
-
-This concept was introduced to me by searching the web for an all-in-one Solution. But i came to the conclusion, that a 100% shared Codebase is not possible. Then i had found out about react and react-native. After a while i realized, that this might be the best approach after all. So i went on GitHub to find a repo, which used the react environment to make something universal possible. I wasn't disappointed. [Benoitvallon](https://github.com/benoitvallon) has created something wonderfull, which got me hook at the first glance. His repo [react-native-nw-react-calculator](https://github.com/benoitvallon/react-native-nw-react-calculator) was the perfect starting point. It almost featured everything i wanted. So i took this repo and made the necessary changes, which are fitting my kind of thinking better. So react-to-everything was created.
 
 ## Libraries
 
@@ -21,27 +17,32 @@ This concept was introduced to me by searching the web for an all-in-one Solutio
 
 ## Basic philosophy
 
-I kept the Basic philosophy like [Benoitvallon](https://github.com/benoitvallon) has defined it. So take a look at his [repo](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#basic-philosophy) to understand how you should structure your Codebase, when using this Boilerplate.
+I kept the basic philosophy like [Benoitvallon](https://github.com/benoitvallon) has defined it. So take a look at his [repo](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#basic-philosophy) to understand how you should structure your Codebase, when using this Boilerplate.
 
 ![Imgur](http://i.imgur.com/XdYh2J1.png?1)
 
 ## Tests
 
-Because the Base Class as described by [Benoitvallon](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#components) of each Component should contain all of the logic, this file should be tested really well. I would recommend to create the test file right when you create the component and write tests for each method in the Base Class as soon as possible.
+Because the base class as described by
+[Benoitvallon](https://github.com/benoitvallon/react-native-nw-react-calculator/blob/master/README.md#components)
+of each component should contain all the logic, this file should be tested
+really well. I would recommend creating the test file right when you create the
+component and write tests for each method in the Base Class as soon as possible.
 
 ## NPM Scripts
 
-I have created npm scripts for every task I have encountered, when something is missing let me know. :smile:
+I have created npm scripts for every task I have encountered, when something is
+missing let me know. :smile:
 
 npm run ...
 * **build** - runs webpack to translate es6 code and merge all of your code in a single file
 * **package:desktop** - creates a package for Linux, Mac and Windows in the dist Folder
-* **package:android** - creates a apk for android
+* **package:android** - creates an apk for android
 * **electron** - runs your app with electron
 * **web** - runs your app in the browser
 * **react-native** - starts react-native
-* **android** - runs your app on an connected android device or a simulator
-* **ios** - runs your app on an ios device or a simulator
+* **android** - runs your app on a connected android device or a simulator
+* **ios** - runs your app on an iOS device or a simulator
 * **coverage** - runs code coverage
 * **lint** - runs eslint to check your code style
 * **travis** - runs build, test, coverage and lint
@@ -52,22 +53,34 @@ npm ...
 * **test** - runs mocha to test your app
 
 ## Plop
-With [Plop](https://github.com/amwmedia/plop) you can auto generate new components. Simply type
+With [Plop](https://github.com/amwmedia/plop) you can auto generate new
+components. Simply type
 ```
 npm run plop
 ```
 and then choose the desired option. Give a name and you a ready to go and start
 coding, without the hassle of creating the same structure over and over again.
-Plop is configured by plopfile.js. The templates can be found in
-plop-templates.
+Plop is configured by plopfile.js. The templates can be found in plop-templates.
 
 ## Codestyle
 
-I find it really important to use a consistent Codestyle throughout your project. Therefore I added ESLint as a devDependency and created an eslint-config file. Most of the Codestyle rules came from the [Airbnb Style Guide](https://github.com/airbnb/javascript). They have done an awesome job with this Style Guide. I think, when you use a good Codestyle you make less errors and when you combine that with ESLint, which will consistently throw your bad styles at you (when you have an editor, which picks show ESLint errors/warning or after running "npm run lint"), you will make much less mistakes.
+I find it really important to use a consistent codestyle throughout your
+project. Therefore, I added ESLint as a devDependency and created an
+eslint-config file. Most of the codestyle rules came from the [Airbnb Style
+Guide](https://github.com/airbnb/javascript). They have done an awesome job with
+this style-guide. I think, when you use a good codestyle you make fewer errors
+and when you combine that with ESLint, which will consistently throw your bad
+styles at you (when you have an editor, which picks show ESLint errors/warning
+or after running "npm run lint"), you will make much fewer mistakes.
 
 ### ES6
 
-This boilerplate is all about ES6. Everything is written with new ES6 features. Tests ... ES6, Source Files ... ES6, Gruntfile ... ES6, Webpack Config ... ES6. So keep moving with Javascript and use ES6. I love it :heart:. Here you can read about how you have done something with Javascript and how you do it with ES6. [Use ECMAScript 6 Today](http://code.tutsplus.com/articles/use-ecmascript-6-today--net-31582)
+This boilerplate is all about ES6. Everything is written with new ES6 features.
+Tests ... ES6, Source Files ... ES6, Gruntfile ... ES6, Webpack Config ... ES6.
+So keep moving with Javascript and use ES6. I love it :heart:. Here you can read
+about how you have done something with Javascript and how you do it with ES6.
+[Use ECMAScript 6
+Today](http://code.tutsplus.com/articles/use-ecmascript-6-today--net-31582)
 
 # How to get started?
 
@@ -90,6 +103,11 @@ Install flow:
 sudo npm install -g flow-bin
 ```
 
-Android requires a little bit more work from you, but when you are following this guide ([Android Setup](https://facebook.github.io/react-native/docs/android-setup.html)) it should be easy.
+Android requires a little more work from you, but when you are following
+this guide ([Android
+Setup](https://facebook.github.io/react-native/docs/android-setup.html)) it
+should be easy.
 
-Now everything is setup up and you are ready to develop your awesome app. I would really love to know about your projects. So send me an email and I will take a look.
+Now everything is set up and you are ready to develop your awesome app. I
+would really love to know about your projects. So send me an email and I will
+take a look.
