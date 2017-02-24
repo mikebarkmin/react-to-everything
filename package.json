@@ -1,7 +1,7 @@
 {
-  "name": "ReactToEveryThing",
-  "version": "0.0.1",
-  "description": "",
+  "name": "react-to-everything",
+  "version": "1.0.0",
+  "description": "Starter Kit for simultaneously developing a react app for android, ios, desktop and web.",
   "author": "Mike Barkmin <mbarkmin@gmail.com> (http://barkmin.eu)",
   "license": "GPL-3.0",
   "keywords": [
