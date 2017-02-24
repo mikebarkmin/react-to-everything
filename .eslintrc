@@ -3,14 +3,15 @@
   "env": {
     "node": true,
     "es6": true,
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "plugins": [
     "react"
   ],
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
-        devDependencies: ["**/*.tests.js"]
+        devDependencies: ["src/__tests__/**/*.js"]
     }],
     "class-methods-use-this": 1,
     "jsx-quotes": 1,

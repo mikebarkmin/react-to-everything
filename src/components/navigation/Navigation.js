@@ -2,10 +2,7 @@ import { connect } from 'react-redux';
 import Base from './NavigationBase';
 import { pushRoute } from '../../actions/navigationActions';
 
-@connect(store => ({
-  navigation: store.navigation,
-}))
-export default class Navigation extends Base {
+export class Navigation extends Base {
   constructor(props) {
     super(props);
     this.goToHome = this.goToHome.bind(this);
@@ -18,3 +15,11 @@ export default class Navigation extends Base {
     this.props.dispatch(pushRoute({ path: 'settings' }));
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    navigation: state.navigation,
+  };
+}
+
+export default connect(mapStateToProps)(Navigation);

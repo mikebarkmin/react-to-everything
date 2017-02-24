@@ -5,10 +5,7 @@ import Base from './AppBase';
 import Home from '../home/Home';
 import Settings from '../settings/Settings';
 
-@connect(store => ({
-  navigation: store.navigation,
-}))
-export default class App extends Base {
+export class App extends Base {
   renderRoute() {
     const route = this.props.navigation.routes.slice(-1)[0];
     switch (route.path) {
@@ -28,3 +25,11 @@ export default class App extends Base {
     }
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    navigation: state.navigation,
+  };
+}
+
+export default connect(mapStateToProps)(App);

@@ -3,10 +3,7 @@ import Base from './SettingsBase';
 
 import { setSettings1, setSettings2 } from '../../actions/settingsActions';
 
-@connect(store => ({
-  settings: store.settings,
-}))
-export default class Settings extends Base {
+export class Settings extends Base {
   constructor(props) {
     super(props);
     this.onSettings1Change.bind(this);
@@ -19,3 +16,11 @@ export default class Settings extends Base {
     this.props.dispatch(setSettings2(value));
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    settings: state.settings,
+  };
+}
+
+export default connect(mapStateToProps)(Settings);
